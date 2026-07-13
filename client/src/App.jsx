@@ -8,7 +8,7 @@ import Intro from "./pages/Intro";
 import Home from "./pages/Home";
 import SigninForm from "./pages/SigninForm";
 import SignupForm from "./pages/SignupForm";
-import InputForm from "./pages/InputForm";
+import InputForm from "./pages/Inputform.jsx";  
 import Recommendation from "./pages/Recommendation.jsx"; 
 import Dashboard from "./pages/Dashboard";
 
