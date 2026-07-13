@@ -44,29 +44,13 @@ DETAILS_PATH = os.path.join(
 # Load Model
 # =====================================================
 
-model = None
-feature_columns = None
-crop_mapping = None
-crop_details = None
+model = joblib.load(MODEL_PATH)
 
-def load_resources():
-    global model, feature_columns, crop_mapping, crop_details
+feature_columns = joblib.load(FEATURE_PATH)
 
-    if model is None:
-        print("Loading model...")
-        model = joblib.load(MODEL_PATH)
+crop_mapping = joblib.load(MAPPING_PATH)
 
-    if feature_columns is None:
-        print("Loading feature columns...")
-        feature_columns = joblib.load(FEATURE_PATH)
-
-    if crop_mapping is None:
-        print("Loading crop mapping...")
-        crop_mapping = joblib.load(MAPPING_PATH)
-
-    if crop_details is None:
-        print("Loading crop details...")
-        crop_details = pd.read_csv(DETAILS_PATH)
+crop_details = pd.read_csv(DETAILS_PATH)
 
 print("===================================")
 print("Crop Recommendation API Loaded")
