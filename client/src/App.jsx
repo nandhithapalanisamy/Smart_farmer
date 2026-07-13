@@ -1,6 +1,6 @@
 import { Routes, Route, Navigate } from "react-router-dom";
 
-import Layout from "./components/layout";
+import Layout from "./components/Layout.jsx";
 import ProtectedRoute from "./components/ProtectedRoute";
 
 import PublicHome from "./pages/PublicHome";
