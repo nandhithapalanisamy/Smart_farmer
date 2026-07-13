@@ -1,0 +1,6 @@
+nitrogen,phosphorus,potassium,ph,temperature,humidity,rainfall,category,predicted_crop,confidence,timestamp
+90,42,43,6.5,20.87,82.0,202.93,Cereals & Grains,Rice,86.5,2026-07-13T15:13:09.513004
+103,77,124,7.6,26,58,155,Oilseeds,Sunflower,82.9,2026-07-13T15:21:02.911418
+152,128,167,12.1,43,87,257,Oilseeds,Sunflower,81.1,2026-07-13T15:21:30.231803
+108,42,163,4.8,40,87,289,Fruits,Banana,86.5,2026-07-13T15:21:53.808483
+119,97,129,6.2,22,96,289,Vegetables,Potato,79.0,2026-07-13T15:40:49.853639
