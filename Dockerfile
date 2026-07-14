@@ -26,5 +26,5 @@ COPY --from=frontend-builder /app/client/dist ./client/dist
 # Expose port (Render will override this, but good practice)
 EXPOSE 3000
 
-# Run gunicorn, binding to the PORT environment variable provided by Render
-CMD sh -c "gunicorn --chdir server app:app -b 0.0.0.0:\$PORT"
+# Run gunicorn, binding to the PORT environment variable provided by Render, using 1 worker and 2 threads to conserve memory
+CMD sh -c "gunicorn --chdir server app:app -b 0.0.0.0:\$PORT --workers 1 --threads 2"

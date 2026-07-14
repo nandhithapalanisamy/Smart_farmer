@@ -63,8 +63,8 @@ X_train_res, y_train_res = X_train, y_train
 
 print("Training Extra Trees...")
 et = ExtraTreesClassifier(
-    n_estimators=100,
-    max_depth=20,
+    n_estimators=50,
+    max_depth=15,
     random_state=42,
     n_jobs=-1
 )
