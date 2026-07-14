@@ -19,8 +19,9 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 COPY server/requirements.txt ./server/
 RUN pip install --no-cache-dir -r server/requirements.txt
 
-# Copy backend files and built frontend
+# Copy backend files, data, and built frontend
 COPY server/ ./server/
+COPY data/ ./data/
 COPY --from=frontend-builder /app/client/dist ./client/dist
 
 # Expose port (Render will override this, but good practice)
