@@ -15,8 +15,8 @@ import os
 # PATH CONFIGURATION
 # =====================================================
 
-SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
-PROJECT_ROOT = os.path.dirname(SCRIPT_DIR)
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+PROJECT_ROOT = os.path.dirname(BASE_DIR)
 DATA_DIR = os.path.join(PROJECT_ROOT, "data")
 SAVE_DIR = os.path.join(PROJECT_ROOT, "server", "models")
 

@@ -5,7 +5,9 @@ from routes.recommendation import recommendation_bp
 from routes.auth import auth_bp
 
 # Set up static file folder (pointing to client/dist)
-static_folder_path = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "client", "dist")
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+PROJECT_ROOT = os.path.dirname(BASE_DIR)
+static_folder_path = os.path.join(PROJECT_ROOT, "client", "dist")
 
 app = Flask(__name__, static_folder=static_folder_path, static_url_path="")
 

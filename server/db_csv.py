@@ -4,9 +4,9 @@ import datetime
 import uuid
 
 # Define paths
-SERVER_DIR = os.path.dirname(os.path.abspath(__file__))
-PROJECT_DIR = os.path.dirname(SERVER_DIR)
-DATA_DIR = os.path.join(PROJECT_DIR, "data")
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+PROJECT_ROOT = os.path.dirname(BASE_DIR)
+DATA_DIR = os.path.join(PROJECT_ROOT, "data")
 
 USERS_CSV = os.path.join(DATA_DIR, "users.csv")
 PREDICTIONS_CSV = os.path.join(DATA_DIR, "prediction_history.csv")

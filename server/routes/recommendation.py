@@ -14,12 +14,9 @@ recommendation_bp = Blueprint("recommendation", __name__)
 
 # =====================================================
 # Paths
-# =====================================================
-
-import os
-
-# server folder
-SERVER_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+SERVER_DIR = os.path.dirname(BASE_DIR)
+PROJECT_ROOT = os.path.dirname(SERVER_DIR)
 
 # models folder
 MODELS_DIR = os.path.join(SERVER_DIR, "models")
@@ -29,13 +26,9 @@ FEATURE_PATH = os.path.join(MODELS_DIR, "feature_columns.pkl")
 SCALER_PATH = os.path.join(MODELS_DIR, "scaler.pkl")
 MAPPING_PATH = os.path.join(MODELS_DIR, "crop_mapping.pkl")
 
-# Crop_Details_Dataset.csv is in the project root
-# Project folder
-PROJECT_DIR = os.path.dirname(SERVER_DIR)
-
-# Data folder
+# Crop_Details_Dataset.csv
 DETAILS_PATH = os.path.join(
-    PROJECT_DIR,
+    PROJECT_ROOT,
     "data",
     "Crop_Details_Dataset.csv"
 )
